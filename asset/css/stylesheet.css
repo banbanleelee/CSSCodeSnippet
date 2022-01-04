@@ -1,0 +1,133 @@
+:root {
+    --purple: rgb(214, 129, 193);
+    --darkpurple: rgb(83, 22, 83);
+    --darkgrey: rgb(80, 78, 78);
+    --white: white;
+    --extrasmall: 5px;
+    --small: 15px;
+    --medium: 30px;
+    --large: 45px;
+}
+
+header{
+    display: block;
+    height:fit-content;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: start;
+    background-color: var(--darkgrey);
+    color: var(--white);
+    padding: var(--small)
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: var(--purple);
+    padding: var(--small);
+}
+
+h2 {
+    text-align: center;
+    padding: var(--small);
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+.code-box {
+    display: block;
+    justify-content: center;
+    width: 29%;
+    height: auto;
+    border: 1px dashed var(--white);
+    padding: var(--small);
+    margin: 2%;
+}
+
+.code-box h3 {
+    border: 1px solid var(--white);
+    border-radius: var(--extrasmall);
+    padding: var(--extrasmall);
+}
+
+.code-box .card-header {
+    transition: all 0.1s ease-in-out;
+}
+
+.code-box:hover, .code-box:hover .card-header {
+    border: 2px solid var(--white);
+    box-shadow: inset 0px 0px 8px var(--purple), 0 0 15px var(--purple);
+}
+
+.card-header {
+    position: relative;
+    margin-top: -20px;
+    width: 80%;
+    justify-content: center;
+    background-color: var(--darkgrey);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4{
+    font: var(--medium);
+    color: var(--purple);
+    line-height: 1.5;
+    margin-top: var(--small);
+    margin-bottom: var(--small);
+}
+
+.code-card {
+    -webkit-user-select: all;
+    display: block;
+    position: relative;
+    background-image: linear-gradient(
+        var(--darkpurple),
+        var(--purple)
+    );
+    border-radius: var(--extrasmall);
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.6;
+    height: 68%;
+    margin: 0;
+    padding: var(--small);
+}
+
+.code-card:focus{
+    animation: select 100ms step-end forwards;
+}
+
+footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#heart {
+    color: var(--purple);
+}
+
+@media screen and  (max-width: 992px) {
+    .code-box {
+        width: 45.5%;
+    }
+}
+
+@media screen and  (max-width: 768px) {
+    .code-box {
+        width: 95%;
+    }
+}
+
+@keyframes select {
+    to {
+        -webkit-user-select: text;
+        user-select: text;
+    }
+}
